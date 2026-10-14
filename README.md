@@ -25,7 +25,7 @@ The deck in this repo is for **ACME**, a fictional same-day fulfilment startup. 
 
 ### With an AI coding agent (recommended)
 
-Clone the repo, open it in Claude Code, Cursor, Codex or any agent that reads `AGENTS.md`, and say:
+Click **Use this template** on GitHub (or clone the repo), open it in Claude Code, Cursor, Codex or any agent that reads `AGENTS.md`, and say:
 
 > Use my design system and my startup and create this new deck.
 > My company: [paste a description, or point to your old deck, one-pager or website].
@@ -83,6 +83,6 @@ scripts/         serve.mjs, check.mjs, og.mjs
 AGENTS.md        the agent guide; CLAUDE.md points to it
 ```
 
-## Credits
+## Credits and license
 
-The structure, layouts and engine come from the Renaissance seed deck.
+The structure, layouts and engine come from the Renaissance seed deck. Released under the [MIT License](LICENSE): use it, adapt it and ship your own deck.
