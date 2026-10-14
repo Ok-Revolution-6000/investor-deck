@@ -1,0 +1,42 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   BRAND · TYPE, WORDMARK AND FINISH — the one stylesheet you change to restyle
+   the deck (colours live in brand.js). Load the fonts in index.html's <head>.
+
+   Five type roles carry the whole deck:
+     --f-display  the biggest words: cover name, the ask, the vision line
+     --f-title    card titles, big figures, people's names, contents numbers
+     --f-quote    pull quotes (set in italic)
+     --f-sans     headlines, body copy, buttons
+     --f-mono     kickers, labels, numbers in tables, sources
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --f-display: "Fraunces", Georgia, serif;
+  --f-title: "Fraunces", Georgia, serif;
+  --f-quote: "Fraunces", Georgia, serif;
+  --f-sans: "DM Sans", system-ui, sans-serif;
+  --f-mono: "DM Mono", ui-monospace, monospace;
+
+  --signal: #FF5B2E;      /* fixed brand colour that ignores palette changes: the wordmark dot, × marks */
+  --media-bg: #26272b;    /* behind images while they load */
+  --radius: 6px;          /* slide corners on the desk */
+  --grain: 0.08;          /* film grain over every slide; 0 turns it off */
+}
+
+/* Type tuning: adjust these when the display or title face changes. */
+.display { font-weight: 400; letter-spacing: -0.035em; font-variation-settings: "opsz" 144, "SOFT" 30; }
+.fig, .h3, .h1.name { font-variation-settings: "opsz" 72; }
+.pull { font-weight: 300; }
+
+/* ── Wordmark ──
+   A text wordmark: the company name in the display face with a signal-colour full stop.
+   To use a logo file instead, replace this block with a mask, so the logo takes the palette's ink:
+     .wordmark { width: 120px; aspect-ratio: 4 / 1; background: var(--fg);
+       -webkit-mask: url(assets/logo.svg) center / contain no-repeat; mask: url(assets/logo.svg) center / contain no-repeat; }
+     .wordmark::before, .wordmark::after { content: none; }
+     .slide .wordmark { width: 9cqw; } .by .wordmark { width: 7.4cqw; }
+*/
+.wordmark { display: inline-block; flex: none; font-style: normal; font-family: var(--f-display); font-weight: 600; font-size: 22px; line-height: 1; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; }
+.wordmark::before { content: "ACME"; }
+.wordmark::after { content: "."; color: var(--signal); }
+.slide .wordmark { font-size: 1.6cqw; }
+@media (max-width: 700px) { .bar .wordmark { font-size: 19px; } }

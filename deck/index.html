@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ═══ COMPANY META: title, description and the social preview. Use absolute URLs for og:url and og:image. ═══ -->
+<title>ACME Investor Deck</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="ACME, same-day fulfilment for every independent brand. Investor deck · Seed 2026.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ACME">
+<meta property="og:url" content="https://acme.example/deck">
+<meta property="og:title" content="ACME Investor Deck">
+<meta property="og:description" content="Same-day fulfilment for every independent brand. Seed · 2026.">
+<meta property="og:image" content="https://acme.example/deck/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ACME Investor Deck">
+<meta name="twitter:description" content="Same-day fulfilment for every independent brand. Seed · 2026.">
+<meta name="twitter:image" content="https://acme.example/deck/assets/og-image.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<!-- ═══ BRAND FONTS: load the faces brand.css names. ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=DM+Sans:opsz,wght@9..40,300..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="brand.js"></script>
+<link rel="stylesheet" href="deck.css">
+<link rel="stylesheet" href="brand.css">
+<script>
+/* ═══ COMPANY DETAILS used by the toolbar, the folio on every slide and Copy for AI. ═══ */
+window.DECK = {
+  company: "ACME",
+  round: "Seed",
+  date: "October 2026",
+  folio: "ACME · Same-day, everywhere",
+  confidential: "Confidential",
+  contact: "Founder & CEO: Jordan Reyes · jordan@acme.example · https://acme.example"
+};
+</script>
+</head>
+<body>
+<header class="bar">
+  <span class="wordmark" role="img" aria-label="ACME"></span>
+  <span class="title">Investor Deck · Seed · October 2026 · Confidential</span>
+  <span class="spacer"></span>
+  <span class="pal" id="pal-name">—</span>
+  <button class="btn-ghost" id="shuffle" type="button" title="Show the deck in another of our brand colour palettes">Change colours ↻</button>
+  <button class="btn-ghost btn-ai" id="copy-ai" type="button" title="Copies the full deck as Markdown, ready for ChatGPT, Claude or Gemini">✦ Copy for AI</button>
+  <button class="btn-present" id="present" type="button" title="Present full screen (P)">▶ Present</button>
+</header>
+<div class="ai-toast" id="ai-toast" role="status" aria-live="polite"></div>
+
+<main class="deck" id="deck">
+
+<!-- ACME is a fictional company. Every name, figure and source in this file is illustrative: replace all of it.
+     Each <section class="slide"> is one 16:9 sheet. data-title names it in the contents, the divider above it
+     and Copy for AI. The story each slide tells is described in docs/STORY.md. -->
+
+<!-- ═══ 01 COVER ═══ -->
+<section class="slide" data-title="Cover" data-nofolio>
+  <figure class="obj hero-art ph" data-ph="Hero image · 4:5" style="--px:30%;--py:20%">
+    <figcaption>A micro-warehouse in the Mission, San Francisco</figcaption>
+  </figure>
+  <div class="pad">
+    <div class="kick"><span>Same-day, everywhere</span><span class="n">Seed · 2026</span></div>
+    <div class="grow col" style="justify-content:center">
+      <p class="label rv">Fulfilment for the independent brand</p>
+      <h1 class="display rv d2" style="margin:2cqw 0 2.4cqw;font-size:10cqw" aria-label="ACME">ACME<span style="color:var(--signal)">.</span></h1>
+      <p class="lead rv d3" style="max-width:44cqw">The giants taught shoppers to expect today. <em class="pig">We give every brand today.</em> Orders ship from robot-run micro-warehouses inside the cities where their customers live.</p>
+    </div>
+    <div class="row rule rv d4" style="padding-top:1.2cqw;justify-content:space-between">
+      <span class="label">acme.example</span><span class="label">Brands · Operators · Couriers</span><span class="label mono">Fictional company · illustrative figures</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 CONTENTS (Copy for AI skips it: data-nocopy) ═══ -->
+<section class="slide" data-title="Contents" data-nocopy>
+  <div class="pad">
+    <div class="kick"><span>Contents</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:2.2cqw">
+      <h2 class="h1 rv">Same-day for everyone, <span class="pig">in order.</span></h2>
+      <p class="body rv d2" style="max-width:30cqw">From the problem to the product, the plan and the people. Click any line to jump to it.</p>
+    </div>
+    <div class="toc grow rv d3">
+      <div class="toc-col">
+        <div class="toc-img ph" style="--px:20%;--py:80%"><span class="toc-num">01</span><span class="toc-name">The opportunity</span></div>
+        <div class="toc-list">
+          <a class="toc-row" href="#" data-go="Company purpose"><span class="toc-n"></span><span class="toc-t">Company purpose</span></a>
+          <a class="toc-row" href="#" data-go="Problem"><span class="toc-n"></span><span class="toc-t">Problem</span></a>
+          <a class="toc-row" href="#" data-go="Solution"><span class="toc-n"></span><span class="toc-t">Solution</span></a>
+          <a class="toc-row" href="#" data-go="Product"><span class="toc-n"></span><span class="toc-t">ACME Console</span></a>
+          <a class="toc-row" href="#" data-go="Why now"><span class="toc-n"></span><span class="toc-t">Why now</span></a>
+          <a class="toc-row" href="#" data-go="Market"><span class="toc-n"></span><span class="toc-t">Market</span></a>
+        </div>
+      </div>
+      <div class="toc-col">
+        <div class="toc-img ph" style="--px:70%;--py:30%"><span class="toc-num">02</span><span class="toc-name">The business</span></div>
+        <div class="toc-list">
+          <a class="toc-row" href="#" data-go="Problem · the operator's side"><span class="toc-n"></span><span class="toc-t">Dock · the supply side</span></a>
+          <a class="toc-row" href="#" data-go="Competition"><span class="toc-n"></span><span class="toc-t">Competition</span></a>
+          <a class="toc-row" href="#" data-go="Business model"><span class="toc-n"></span><span class="toc-t">Business model</span></a>
+          <a class="toc-row" href="#" data-go="Go-to-market"><span class="toc-n"></span><span class="toc-t">Go-to-market</span></a>
+          <a class="toc-row" href="#" data-go="Traction"><span class="toc-n"></span><span class="toc-t">Traction</span></a>
+          <a class="toc-row" href="#" data-go="The ask"><span class="toc-n"></span><span class="toc-t">Financials & the ask</span></a>
+        </div>
+      </div>
+      <div class="toc-col">
+        <div class="toc-img ph" style="--px:40%;--py:10%"><span class="toc-num">03</span><span class="toc-name">People & vision</span></div>
+        <div class="toc-list">
+          <a class="toc-row" href="#" data-go="Team"><span class="toc-n"></span><span class="toc-t">Team</span></a>
+          <a class="toc-row" href="#" data-go="Product · in pictures"><span class="toc-n"></span><span class="toc-t">Product in pictures</span></a>
+          <a class="toc-row" href="#" data-go="Vision"><span class="toc-n"></span><span class="toc-t">Vision</span></a>
+          <a class="toc-row" href="#" data-go="Next · intro"><span class="toc-n"></span><span class="toc-t">Next · ACME Fresh</span></a>
+          <a class="toc-row" href="#" data-go="Thank you"><span class="toc-n"></span><span class="toc-t">Contact</span></a>
+          <a class="toc-row" href="#" data-go="Appendix · sources"><span class="toc-n"></span><span class="toc-t">Sources</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 03 COMPANY PURPOSE ═══ -->
+<section class="slide" data-title="Company purpose">
+  <div class="pad">
+    <div class="kick"><span>Company purpose</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:1fr 1.1fr;gap:3.5cqw">
+      <div class="col" style="justify-content:center">
+        <h2 class="h1 rv">Give every independent brand <span class="pig">same-day delivery</span>, at the price of next week's.</h2>
+        <p class="lead rv d2" style="margin-top:2.4cqw">We are building the fulfilment layer for the long tail of commerce: a network of small, automated warehouses inside cities, shared by thousands of brands.</p>
+      </div>
+      <div class="rv d3 stack">
+        <figure class="obj ph" style="--x:0%;--y:12%;--r:-5deg;--px:20%;--py:15%;z-index:3"><figcaption>The micro-warehouse</figcaption></figure>
+        <figure class="obj ph" style="--x:31%;--y:28%;--r:2deg;--px:75%;--py:70%;z-index:2"><figcaption>The pick robot</figcaption></figure>
+        <figure class="obj ph" style="--x:58%;--y:9%;--r:5deg;--px:50%;--py:30%;z-index:1"><figcaption style="text-align:right">The doorstep</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 PROBLEM ═══ -->
+<section class="slide" data-title="Problem">
+  <div class="pad">
+    <div class="kick"><span>Problem</span><span class="n"></span></div>
+    <div class="row" style="align-items:flex-end;justify-content:space-between;margin-bottom:2.4cqw">
+      <h2 class="h1 rv" style="max-width:56cqw">Shoppers moved to same-day. <br>Small brands could not follow.</h2>
+      <p class="body rv d2" style="max-width:30cqw">Most shoppers now expect delivery within two days, and many within one. The average independent brand still ships in four.</p>
+    </div>
+    <div class="g4 cells grow rv d3 probs sans-titles">
+      <div><span class="mono n">I.</span><h3 class="h3">Slow by default</h3><p class="body">One warehouse, hundreds of miles from the customer. Ground shipping takes four days, and the shopper has already bought elsewhere.</p><figure class="pimg ph" style="--px:20%;--py:30%"></figure></div>
+      <div><span class="mono n">II.</span><h3 class="h3">Priced out</h3><p class="body">Same-day carriers want volumes only the giants reach. Small brands pay retail rates for speed, or don't offer it at all.</p><figure class="pimg ph" style="--px:70%;--py:20%"></figure></div>
+      <div><span class="mono n">III.</span><h3 class="h3">Locked in</h3><p class="body">Fulfilment contracts run for years, with set-up fees, storage minimums and penalties to leave. Growth means renegotiating.</p><figure class="pimg ph" style="--px:40%;--py:80%"></figure></div>
+      <div><span class="mono n">IV.</span><h3 class="h3">Flying blind</h3><p class="body">Stock sits in one place while demand appears in twenty. No one tells the brand which city needs which product next week.</p><figure class="pimg ph" style="--px:85%;--py:60%"></figure></div>
+    </div>
+    <p class="src" style="margin-top:1cqw">Illustrative figures · replace with your sources (shopper surveys, carrier pricing, customer interviews)</p>
+  </div>
+</section>
+
+<!-- ═══ 05 SOLUTION ═══ -->
+<section class="slide" data-title="Solution">
+  <div class="pad">
+    <div class="kick"><span>Solution</span><span class="n"></span></div>
+    <h2 class="h1 rv" style="max-width:70cqw">Plug in your store. Stock the city. <span class="pig">Ship today.</span></h2>
+    <p class="lead rv d2" style="margin:1.4cqw 0 2.6cqw;max-width:66cqw">One integration from checkout to doorstep. ACME decides where each product should live, keeps it there, and dispatches the moment an order lands.</p>
+    <div class="flow grow rv d3 sans-titles">
+      <div class="step"><figure class="simg ph" style="--px:25%;--py:40%"></figure><span class="mono small">STEP 1 // CONNECT</span><h3 class="h3" style="margin:0.8cqw 0">Plug in</h3><p class="body">Connect Shopify, WooCommerce or any store in five minutes. Orders and stock sync both ways.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><figure class="simg ph" style="--px:70%;--py:30%"></figure><span class="mono small">STEP 2 // FORECAST</span><h3 class="h3" style="margin:0.8cqw 0">Place</h3><p class="body">Our model reads past orders and local demand, and tells you how many units to send to each city.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><figure class="simg ph" style="--px:45%;--py:75%"></figure><span class="mono small">STEP 3 // STORE</span><h3 class="h3" style="margin:0.8cqw 0">Stock</h3><p class="body">Inbound stock is received, counted and shelved by robots in micro-warehouses inside each metro.</p></div>
+      <div class="arrow">→</div>
+      <div class="step on"><figure class="simg ph" style="--px:60%;--py:50%"></figure><span class="mono small">STEP 4 // DELIVER</span><h3 class="h3" style="margin:0.8cqw 0">Shipped today</h3><p class="body">Orders placed by 2 pm are picked in minutes and at the door by evening, with live tracking.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06 PRODUCT ═══ -->
+<section class="slide" data-title="Product">
+  <div class="pad">
+    <div class="kick"><span>Product · live today</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:1fr 1.15fr">
+      <div class="col">
+        <h2 class="h1 name rv">ACME Console</h2>
+        <p class="lead rv d2" style="margin:1.4cqw 0 2cqw">One screen for every unit, city and order. Brands see where demand is, where their stock is, and what to move next.</p>
+        <div style="flex:1;display:flex;align-items:center;min-height:0"><ul class="chips rv d2"><li class="on">Shopify</li><li>WooCommerce</li><li>BigCommerce</li><li class="on">TikTok Shop</li><li>Amazon</li><li>Wholesale</li><li class="on">Returns</li><li>Subscriptions</li></ul></div>
+        <div class="g2 cells rv d3 end" style="grid-template-columns:1fr 1fr;gap:0">
+          <div><div class="fig">14</div><p class="small">cities modelled</p></div>
+          <div><div class="fig">220</div><p class="small">brands on the waitlist</p></div>
+        </div>
+      </div>
+      <div class="gallery rv d3">
+        <figure class="obj ph" style="--px:30%;--py:20%"><figcaption>Demand map</figcaption></figure>
+        <figure class="obj ph" style="--px:70%;--py:30%"><figcaption>Stock planner</figcaption></figure>
+        <figure class="obj ph" style="--px:20%;--py:70%"><figcaption>Order feed</figcaption></figure>
+        <figure class="obj ph" style="--px:80%;--py:80%"><figcaption>Returns</figcaption></figure>
+        <figure class="obj ph" style="--px:50%;--py:50%"><figcaption>Mobile alerts</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 07 PROOF POINT: one number, broken down ═══ -->
+<section class="slide" data-title="Proof point">
+  <div class="pad">
+    <div class="kick"><span>Product · the pilot</span><span class="n"></span></div>
+    <div class="grow center">
+      <p class="label rv">Median time from order to dispatch, pilot network</p>
+      <div class="display rv d2" style="font-size:10.4cqw;white-space:nowrap;margin:2.2cqw 0 2.4cqw">38 minutes</div>
+      <p class="lead rv d3" style="max-width:66cqw">Across <span class="mono ink" style="font-weight:400">41,000</span> pilot orders in San Francisco and Oakland, ACME picked, packed and handed each one to a courier in a median of 38 minutes. 94% arrived the same day.</p>
+    </div>
+    <div class="strip flow-strip rv d4" style="--n:5">
+      <div><span>Order in</span><b>0 min</b></div>
+      <div><span>Routed to dock</span><b>1 min</b></div>
+      <div><span>Picked by robot</span><b>9 min</b></div>
+      <div><span>Packed &amp; labelled</span><b>27 min</b></div>
+      <div><span>Courier hand-off</span><b>38 min</b></div>
+      <div class="hl"><span>Delivered</span><b>Same day</b></div>
+    </div>
+    <p class="small rv d4" style="margin-top:0.9cqw">Illustrative pilot data. Every shift teaches the router, <em class="ink" style="font-style:normal">so the clock gets shorter as the network grows.</em></p>
+  </div>
+</section>
+
+<!-- ═══ 08 WHY NOW ═══ -->
+<section class="slide" data-title="Why now" data-pal="1">
+  <div class="pad">
+    <div class="kick"><span>Why now</span><span class="n"></span></div>
+    <h2 class="h1 rv" style="margin-bottom:2.4cqw">Five curves crossed in the last two years.</h2>
+    <div class="g3 cells grow rv d2 sans-titles" style="grid-template-rows:1fr 1fr">
+      <div><div class="fig">70<small>%</small></div><h3 class="h3">Robots got cheap</h3><p class="small">Mobile picking robots cost far less than five years ago, and lease by the month instead of by the decade. <span class="src">Illustrative</span></p></div>
+      <div><div class="fig">3<small>×</small></div><h3 class="h3">Same-day sells</h3><p class="small">Shoppers offered same-day delivery at checkout convert up to three times as often. <span class="src">Illustrative</span></p></div>
+      <div><div class="fig">API</div><h3 class="h3">Storefronts opened up</h3><p class="small">Every major storefront and marketplace now lets a brand plug in its own fulfilment through public APIs. <span class="src">Illustrative</span></p></div>
+      <div><div class="fig">18<small>%</small></div><h3 class="h3">Cities have space</h3><p class="small">Ground-floor vacancy has opened small, central units at falling rents: the right size for a micro-warehouse. <span class="src">Illustrative</span></p></div>
+      <div><div class="fig">#1</div><h3 class="h3">Speed beats price</h3><p class="small">Delivery speed now ranks above price as the reason shoppers give for choosing where to buy. <span class="src">Illustrative</span></p></div>
+      <div class="col" style="justify-content:center"><p class="pull" style="font-size:1.7cqw">“Logistics is the last unfair advantage the giants have. It doesn't have to be.”<cite>ACME founding memo, 2025</cite></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 09 MARKET ═══ -->
+<section class="slide" data-title="Market">
+  <div class="pad">
+    <div class="kick"><span>Market</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:1fr 1.2fr;gap:4cqw">
+      <div class="col">
+        <h2 class="h2 rv" style="margin-bottom:1.6cqw">Every parcel that should have come today.</h2>
+        <div class="rings grow grow-in">
+          <div class="r1"><span><span class="fig" style="font-size:2.6cqw">$310B</span><br><span class="label">TAM</span></span></div>
+          <div class="r2"><span><span class="fig" style="font-size:2.2cqw">$42B</span><br><span class="label">SAM</span></span></div>
+          <div class="r3"><span><span class="fig" style="font-size:1.7cqw">$1.1B</span><br><span class="label">SOM · Y5</span></span></div>
+        </div>
+      </div>
+      <div class="col">
+        <table class="t rv d2">
+          <tr><th>Layer</th><th>Built from</th><th class="r">Spend</th></tr>
+          <tr><td>TAM</td><td>Global third-party fulfilment spend by online brands</td><td class="mono r">$310B</td></tr>
+          <tr><td>SAM</td><td>North America and Western Europe, brands with $1M–$100M in online sales</td><td class="mono r">$42B</td></tr>
+          <tr><td>SOM</td><td>12,000 brands × 2,300 orders a month × $3.30 net per order in year 5</td><td class="mono r">$1.1B</td></tr>
+        </table>
+        <p class="label rv d3" style="margin:2.2cqw 0 1.2cqw">Adjacent markets, global</p>
+        <div class="bars bars-in">
+          <div class="bar-row"><span class="lbl">Parcel delivery</span><div class="trk"><div class="fill" style="width:100%"></div></div><span class="val">$480B</span></div>
+          <div class="bar-row"><span class="lbl">Third-party logistics</span><div class="trk"><div class="fill" style="width:64.6%"></div></div><span class="val">$310B</span></div>
+          <div class="bar-row"><span class="lbl">Warehouse automation</span><div class="trk"><div class="fill" style="width:8.5%"></div></div><span class="val">$41B</span></div>
+          <div class="bar-row"><span class="lbl">Same-day delivery</span><div class="trk"><div class="fill" style="width:5%"></div></div><span class="val">$24B</span></div>
+          <div class="bar-row"><span class="lbl">Micro-fulfilment</span><div class="trk"><div class="fill" style="width:1.9%"></div></div><span class="val">$9B</span></div>
+          <div class="bar-row"><span class="lbl">Returns logistics</span><div class="trk"><div class="fill" style="width:1.3%"></div></div><span class="val">$6B</span></div>
+        </div>
+        <p class="src end">Illustrative figures · replace with sourced market sizes. Show a bottom-up check beside the top-down one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10 SECOND ACT · THE OTHER SIDE'S PROBLEM ═══ -->
+<section class="slide" data-title="Problem · the operator's side" data-pal="3">
+  <div class="pad">
+    <div class="kick"><span>Problem · the operator's side</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:4cqw">
+      <div class="col">
+        <h2 class="h1 rv">City warehouses sit <span class="pig">half empty</span> while brands wait.</h2>
+        <p class="lead rv d2" style="margin-top:1.6cqw">Small logistics operators hold the space brands need, but not the orders. Between seasonal contracts, bays sit idle and staff wait for the next truck.</p>
+        <div class="rv d3" style="flex:1;display:flex;align-items:center">
+          <p class="pull" style="font-size:3.2cqw">“We have the space. We don't have the orders.”<cite>Operator interviews, illustrative</cite></p>
+        </div>
+      </div>
+      <div class="g2 cells grow rv d3 quad sans-titles" style="grid-template-rows:1fr 1fr;gap:0">
+        <div><span class="mono n">I.</span><h3 class="h3">Idle</h3><p class="body">Urban warehouses run at a fraction of capacity outside peak season, and pay rent on every empty bay.</p></div>
+        <div><span class="mono n">II.</span><h3 class="h3">Unpredictable</h3><p class="body">One large client leaves and a third of the revenue goes with it. There is no market to refill the space.</p></div>
+        <div><span class="mono n">III.</span><h3 class="h3">Manual</h3><p class="body">Clipboards, spreadsheets and phone calls. Automation is sold in million-dollar projects built for giants.</p></div>
+        <div><span class="mono n">IV.</span><h3 class="h3">Disconnected</h3><p class="body">No link to the storefronts where orders begin, so operators can't sell same-day to the brands that want it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11 SECOND ACT · INTRO: a product within the company ═══ -->
+<section class="slide" data-title="Dock · intro" data-pal="3">
+  <div class="pad" style="text-align:center">
+    <div class="kick" style="text-align:left"><span>Product · supply · ACME Dock</span><span class="n"></span></div>
+    <div class="grow center">
+      <span class="by">A product by <i class="wordmark" role="img" aria-label="ACME"></i></span>
+      <div class="rv"><span class="product-name">Dock<i>for operators</i></span></div>
+      <p class="label rv d2" style="margin-top:1cqw">The network layer that turns idle city space into same-day capacity</p>
+      <div class="tagline rv d2" style="margin:2.2cqw 0 2.4cqw">Idle Space, Paid</div>
+      <p class="lead rv d3" style="max-width:66cqw">Operators bring the space; Dock brings everything else. Robots on a monthly lease, software that runs the floor, and a steady flow of orders from every brand in the network.</p>
+    </div>
+    <div class="strip flow-strip rv d4" style="--n:5">
+      <div><span>Bring</span><b>Any unit</b></div>
+      <div><span>Fit-out</span><b>Robots on lease</b></div>
+      <div><span>Inventory</span><b>Routed in</b></div>
+      <div><span>Orders</span><b>From the network</b></div>
+      <div><span>Payout</span><b>Every week</b></div>
+      <div class="hl"><span>Grow</span><b>The next unit</b></div>
+    </div>
+    <p class="small rv d4" style="margin-top:0.9cqw;text-align:left">Console sells speed to brands. <em class="ink" style="font-style:normal">Dock supplies the floors it runs on.</em></p>
+  </div>
+</section>
+
+<!-- ═══ 12 SECOND ACT · BEFORE / AFTER and a worked example ═══ -->
+<section class="slide" data-title="Dock · before and after" data-pal="3">
+  <div class="pad">
+    <div class="kick"><span>Product · supply · ACME Dock</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:1fr 1fr">
+      <div class="col">
+        <p class="label rv">ACME Dock · for operators</p>
+        <h2 class="h1 rv" style="margin:1cqw 0 1.4cqw">Operators should only<br>have to operate.</h2>
+        <p class="lead rv d2">Every operator we met said the same: the space is there, the orders aren't. Dock fills the floor from the whole network, <em>so operators spend their days shipping.</em></p>
+        <table class="t rv d3 big vs end">
+          <tr><th>✕ The operator today</th><th>✓ With Dock</th></tr>
+          <tr><td>Empty bays between seasonal contracts</td><td>Filled from a network of thousands of brands</td></tr>
+          <tr><td>Automation sold as a million-dollar project</td><td>Robots on a monthly lease, live in a week</td></tr>
+          <tr><td>Paper, spreadsheets and phone calls</td><td>One floor app for receiving, picking and packing</td></tr>
+          <tr><td>Paid in 60 days, if at all</td><td>Paid every week, per order shipped</td></tr>
+        </table>
+      </div>
+      <div class="rv d3 col" style="justify-content:space-between;gap:1.4cqw;padding-top:0.4cqw">
+        <p class="mono small">A BRAND IN BROOKLYN ASKS // 600 pairs of a new sneaker · New York · launch Friday</p>
+        <div class="box quote-card">
+          <div class="opt"><span class="body">400 pairs · Bushwick dock</span><span class="mono body ink">ready Thursday</span></div>
+          <div class="opt"><span class="body">200 pairs · Jersey City dock</span><span class="mono body ink">ready Wednesday</span></div>
+          <div class="opt win"><span class="label">ACME routed</span><span class="mono">same-day to 92% of NYC</span></div>
+          <div class="opt old"><span class="body">One warehouse in Ohio</span><span class="mono body">3–5 days</span></div>
+        </div>
+        <p class="small">Split across two docks, the launch reached nine in ten New Yorkers the same day. <span class="ink">The brand never called a warehouse.</span></p>
+        <ul class="chips"><li class="on">New York</li><li>Bushwick</li><li>Jersey City</li><li>Queens</li><li class="on">Bay Area</li><li>Oakland</li><li>Mission</li><li>San José</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13 SECOND ACT · HOW IT WORKS ═══ -->
+<section class="slide" data-title="How it works" data-pal="3">
+  <div class="pad">
+    <div class="kick"><span>Product · how it works</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:2cqw">
+      <h2 class="h1 rv">How the network <span class="pig">works.</span></h2>
+      <p class="body rv d2" style="max-width:40cqw">Orders flow in from every storefront, the router picks the best dock, robots pick and pack, and couriers take it from there. Every order teaches the forecast.</p>
+    </div>
+    <div class="pipe grow rv d3" style="--n:6">
+      <div><p class="stage">01 · Demand in</p><div class="boxes">
+        <div class="node"><small>Storefronts</small><b>Brand orders</b><span>Shopify, Woo, TikTok Shop</span></div>
+        <div class="node"><small>Marketplaces</small><b>Channel orders</b><span>Amazon, wholesale, B2B</span></div>
+      </div></div>
+      <div><p class="stage">02 · Forecast</p><div class="boxes">
+        <div class="node"><small>Model</small><b>Demand forecast</b><span>units per city, per week</span></div>
+      </div></div>
+      <div><p class="stage">03 · Place</p><div class="boxes">
+        <div class="node"><small>Dock</small><b>Nearest dock</b><span>stock on hand</span></div>
+        <div class="node"><small>Dock</small><b>Second dock</b><span>split the order</span></div>
+        <div class="node"><small>Fallback</small><b>Regional</b><span>next-day backup</span></div>
+      </div></div>
+      <div><p class="stage">04 · Route</p><div class="boxes">
+        <div class="node hl"><small>Optimiser</small><b>Router</b><span>scores every option by distance, cut-off time, cost and courier capacity</span></div>
+      </div></div>
+      <div><p class="stage">05 · Fulfil</p><div class="boxes">
+        <div class="node"><small>Robots</small><b>Pick &amp; pack</b><span>median 27 minutes</span></div>
+        <div class="node"><small>Human in the loop</small><b>Quality check</b><span>photo on every order</span></div>
+      </div></div>
+      <div><p class="stage">06 · Deliver</p><div class="boxes">
+        <div class="node ink"><small>Courier</small><b>Doorstep</b><span>same day, live tracking</span></div>
+      </div></div>
+    </div>
+    <p class="label rv d4" style="margin:1.6cqw 0 0.8cqw;color:var(--accent)">Data layer · shared by every step</p>
+    <div class="layer rv d4">
+      <div><b>Demand graph</b><span>orders by product, city and hour</span></div>
+      <div><b>Stock index</b><span>every unit, every dock, live</span></div>
+      <div><b>Dock profiles</b><span>capacity, cut-offs, robot fleet</span></div>
+      <div><b>Courier network</b><span>coverage, price and speed by zip code</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 14 COMPETITION ═══ -->
+<section class="slide" data-title="Competition">
+  <div class="pad">
+    <div class="kick"><span>Competition</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:2cqw">
+      <h2 class="h1 rv" style="max-width:60cqw">Others are fast, flexible or affordable. Never all three.</h2>
+      <p class="body rv d2" style="max-width:28cqw">We are the only option that gives a small brand same-day delivery without volume minimums or a long contract.</p>
+    </div>
+    <div class="rv d3 grow">
+      <table class="t">
+        <tr><th>Option</th><th>Who it serves</th><th class="c">Same-day</th><th class="c">No minimums</th><th class="c">No lock-in</th><th class="c">Forecasting</th><th>Typical terms</th></tr>
+        <tr class="us"><td>ACME</td><td>Independent brands, $1M–$100M online</td><td class="c yes">●</td><td class="c yes">●</td><td class="c yes">●</td><td class="c yes">●</td><td class="mono">Per order, monthly</td></tr>
+        <tr><td>Marketplace fulfilment</td><td>Sellers on one marketplace</td><td class="c part">◐</td><td class="c yes">●</td><td class="c part">◐</td><td class="c no">○</td><td class="mono">Platform only</td></tr>
+        <tr><td>National 3PLs</td><td>Mid-size and large brands</td><td class="c no">○</td><td class="c no">○</td><td class="c no">○</td><td class="c part">◐</td><td class="mono">12–36 months</td></tr>
+        <tr><td>On-demand couriers</td><td>Restaurants and local shops</td><td class="c yes">●</td><td class="c yes">●</td><td class="c yes">●</td><td class="c no">○</td><td class="mono">Per delivery</td></tr>
+        <tr><td>Micro-fulfilment vendors</td><td>Grocers building their own sites</td><td class="c yes">●</td><td class="c no">○</td><td class="c no">○</td><td class="c part">◐</td><td class="mono">Capital project</td></tr>
+        <tr><td>In-house warehouse</td><td>Brands that ship themselves</td><td class="c no">○</td><td class="c yes">●</td><td class="c part">◐</td><td class="c no">○</td><td class="mono">Lease + staff</td></tr>
+      </table>
+    </div>
+    <div class="row rv d4" style="justify-content:space-between;align-items:flex-end;margin-top:1.4cqw"><p class="body" style="max-width:62cqw"><em>The demand is proven.</em> Marketplaces have shown that same-day sells; what they haven't done is offer it to brands on their own storefronts, on their own terms.</p><p class="src" style="text-align:right">● full · ◐ partial · ○ none<br>Illustrative · name real competitors in your deck</p></div>
+  </div>
+</section>
+
+<!-- ═══ 15 BUSINESS MODEL ═══ -->
+<section class="slide" data-title="Business model">
+  <div class="pad">
+    <div class="kick"><span>Business model</span><span class="n"></span></div>
+    <h2 class="h1 rv" style="margin-bottom:1.8cqw">Four revenue lines, one network.</h2>
+    <div class="g4 cells rv d2 sans-titles">
+      <div><span class="mono n">BRANDS</span><h3 class="h3 has-tip" tabindex="0">Fulfilment fees <span class="tip-i" aria-hidden="true">i</span><span class="tipbox" role="tooltip"><b>Who pays: independent brands</b>Charged per order shipped: pick, pack and hand-off to the courier. Delivery is passed through at cost.</span></h3><div class="fig" style="font-size:3cqw;margin:1cqw 0">$2.10<small>/order</small></div><p class="small">Blended across order sizes. Priced to beat a national 3PL plus an express upgrade.</p></div>
+      <div><span class="mono n">BRANDS</span><h3 class="h3 has-tip" tabindex="0">Storage <span class="tip-i" aria-hidden="true">i</span><span class="tipbox" role="tooltip"><b>Who pays: independent brands</b>Charged per cubic foot of stock held in the network each month, with no minimum.</span></h3><div class="fig" style="font-size:3cqw;margin:1cqw 0">$0.45<small>/ft³</small></div><p class="small">Per cubic foot a month. The forecast keeps stock lean, so storage stays a small line.</p></div>
+      <div><span class="mono n">OPERATORS</span><h3 class="h3 has-tip" tabindex="0">Dock share <span class="tip-i" aria-hidden="true">i</span><span class="tipbox" role="tooltip"><b>Who pays: dock operators</b>A share of every order a dock fulfils through the network, in exchange for the orders, the software and the robot lease.</span></h3><div class="fig" style="font-size:3cqw;margin:1cqw 0">18<small>%</small></div><p class="small">Of dock revenue from network orders. Operators keep the rest and their own clients.</p></div>
+      <div><span class="mono n">BRANDS</span><h3 class="h3 has-tip" tabindex="0">Console Pro <span class="tip-i" aria-hidden="true">i</span><span class="tipbox" role="tooltip"><b>Who pays: growing brands</b>A monthly subscription for multi-city forecasting, launch planning and wholesale routing.</span></h3><div class="fig" style="font-size:3cqw;margin:1cqw 0">$299<small>/mo</small></div><p class="small">Forecasting and launch planning for brands in three or more cities.</p></div>
+    </div>
+    <div class="row rv d3 end" style="gap:4cqw;align-items:flex-end;margin-bottom:1.4cqw">
+      <div style="flex:1"><p class="label" style="margin-bottom:1cqw">Unit economics · one same-day order</p>
+        <div class="bars">
+          <div class="bar-row"><span class="lbl">Revenue per order</span><div class="trk"><div class="fill" style="width:100%"></div></div><span class="val">$6.40</span></div>
+          <div class="bar-row"><span class="lbl">Courier (passed through)</span><div class="trk"><div class="fill" style="width:35.9%"></div></div><span class="val">$2.30</span></div>
+          <div class="bar-row"><span class="lbl">Dock share &amp; labour</span><div class="trk"><div class="fill" style="width:18.8%"></div></div><span class="val">$1.20</span></div>
+          <div class="bar-row"><span class="lbl">ACME contribution</span><div class="trk"><div class="fill hl" style="width:45.3%"></div></div><span class="val">$2.90</span></div>
+        </div>
+      </div>
+      <p class="pull" style="flex:0 0 30cqw;font-size:1.6cqw">“Fulfilment is priced like real estate. We price it like software.”<cite>ACME pricing principle</cite></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 16 GO-TO-MARKET ═══ -->
+<section class="slide" data-title="Go-to-market" data-pal="5">
+  <div class="pad">
+    <div class="kick"><span>Go-to-market</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:1fr 1.3fr">
+      <div class="col">
+        <h2 class="h1 rv">Win one city. <br>Then copy it.</h2>
+        <p class="lead rv d2" style="margin-top:1.6cqw">A city is a closed loop: docks, couriers and the brands whose customers live there. Once one loop works, the next is a copy with a new map.</p>
+        <div class="media-fill rv d3 bare">
+          <figure class="obj ph" data-ph="Launch map" style="--px:60%;--py:40%"></figure>
+        </div>
+        <p class="label" style="margin-top:0.9cqw">Bay Area first, then New York and Los Angeles</p>
+      </div>
+      <div class="g3 cells rv d3 sans-titles" style="grid-template-columns:1fr;grid-auto-rows:1fr">
+        <div class="row" style="gap:2cqw;align-items:center"><span class="mono n" style="flex:0 0 5cqw">01 · CITY</span><div><h3 class="h3" style="margin-top:0">Own the Bay Area first</h3><p class="body">Three docks cover 80% of Bay Area addresses. Win density before width.</p></div></div>
+        <div class="row" style="gap:2cqw;align-items:center"><span class="mono n" style="flex:0 0 5cqw">02 · SUPPLY</span><div><h3 class="h3" style="margin-top:0">Sign docks before demand</h3><p class="body">Operators join for free and earn from day one, so capacity is ready before the brands arrive.</p></div></div>
+        <div class="row" style="gap:2cqw;align-items:center"><span class="mono n" style="flex:0 0 5cqw">03 · DEMAND</span><div><h3 class="h3" style="margin-top:0">Land brands that already ship</h3><p class="body">Target brands with 1,000+ orders a month in the city. Same-day lifts their conversion in week one.</p></div></div>
+        <div class="row" style="gap:2cqw;align-items:center"><span class="mono n" style="flex:0 0 5cqw">04 · CHANNEL</span><div><h3 class="h3" style="margin-top:0">Partner with storefronts</h3><p class="body">An app in every storefront's store turns ACME into a checkbox at checkout set-up.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 17 TRACTION & ROADMAP ═══ -->
+<section class="slide" data-title="Traction">
+  <div class="pad">
+    <div class="kick"><span>Traction</span><span class="n"></span></div>
+    <h2 class="h1 rv" style="margin-bottom:2.6cqw">Live in two cities. <span class="pig">Paying.</span></h2>
+    <div class="g4 cells grow rv d2 stage sans-titles">
+      <div><span class="mono n">LIVE · BUILT</span><h3 class="h3">Console &amp; <span class="term has-tip" tabindex="0">forecast<span class="tipbox wide" role="tooltip"><b>The demand forecast</b><span class="tip-sub">Four signals decide where stock should live:</span><span class="tip-grid"><span><i>History</i>past orders by zip code</span><span><i>Season</i>holidays and weather</span><span><i>Launches</i>planned drops and promos</span><span><i>Channels</i>marketplace and wholesale</span></span></span></span></h3><p class="body">Storefront sync, stock planning and the routing engine, live with every pilot brand. Forecasts land within 9% of actual demand.</p></div>
+      <div><span class="mono n live">● ACTIVE NOW</span><h3 class="h3">Pilot network</h3><p class="body">Three docks in San Francisco and Oakland, 41,000 orders shipped, 94% delivered the same day.</p></div>
+      <div><span class="mono n live">● ACTIVE NOW</span><h3 class="h3">Paying brands</h3><p class="body">38 brands on monthly terms, $96K in monthly revenue, growing 22% a month for six months.</p></div>
+      <div><span class="mono n live">● LAUNCHING</span><h3 class="h3">Dock for operators</h3><p class="body">Twelve operators on the waitlist across New York and Los Angeles. First robots ship in December.</p></div>
+    </div>
+    <div class="rv d3" style="margin-top:2.4cqw">
+      <p class="label" style="margin-bottom:1.2cqw">Roadmap</p>
+      <div class="roadmap">
+        <div class="done"><p class="mono body">P1 · live</p><p class="body">Console, forecast and router</p></div>
+        <div class="now"><p class="mono body">P2 · now</p><p class="body">Bay Area density: 6 docks</p></div>
+        <div class="now"><p class="mono body">P3 · now</p><p class="body">Dock beta with first operators</p></div>
+        <div><p class="mono body">P4</p><p class="body">New York launch</p></div>
+        <div><p class="mono body">P5</p><p class="body">Los Angeles; 1,000 brands</p></div>
+        <div><p class="mono body">P6</p><p class="body">Storefront app partnerships</p></div>
+        <div><p class="mono body">P7</p><p class="body">ACME Fresh: cold chain</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 18 TEAM · OVERVIEW ═══ -->
+<section class="slide" data-title="Team" data-pal="6">
+  <div class="pad">
+    <div class="kick"><span>Team</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:2.4cqw">
+      <h2 class="h1 rv">The team.</h2>
+      <p class="body rv d2" style="max-width:40cqw">An operator who has run warehouses and a roboticist who has shipped fleets: <span class="ink">logistics, sales and scale</span> on one side, <span class="ink">robots, software and data</span> on the other.</p>
+    </div>
+    <div class="g2 rv d3" style="align-items:start">
+      <div class="person">
+        <div class="head">
+          <figure class="obj bare ph avatar" style="--px:30%;--py:20%"><span aria-hidden="true">JR</span></figure>
+          <div>
+            <p class="label">Founder &amp; CEO</p>
+            <h3 class="h2">Jordan Reyes</h3>
+            <p class="body">An operator who has run the floor.</p>
+          </div>
+        </div>
+        <div class="fact"><span class="n">OPERATED</span><p class="body">Ran <span class="ink">four fulfilment centres</span> for a national retailer, 2,000 staff and 300K orders a day.</p></div>
+        <div class="fact"><span class="n">SOLD</span><p class="body">First sales hire at a logistics startup, <span class="ink">$0 to $12M ARR</span> in three years.</p></div>
+        <div class="fact"><span class="n">FOUNDED</span><p class="body">Built and sold a direct-to-consumer brand: <span class="ink">felt the problem first-hand.</span></p></div>
+      </div>
+      <div class="person">
+        <div class="head">
+          <figure class="obj bare ph avatar" style="--px:70%;--py:30%"><span aria-hidden="true">SO</span></figure>
+          <div>
+            <p class="label">Co-founder &amp; CTO</p>
+            <h3 class="h2">Sam Okafor</h3>
+            <p class="body">A roboticist who ships fleets.</p>
+          </div>
+        </div>
+        <div class="fact"><span class="n">ROBOTS</span><p class="body">Led the picking team at a warehouse-robotics company: <span class="ink">1,500 robots</span> in production.</p></div>
+        <div class="fact"><span class="n">SCALE</span><p class="body">Built routing at a delivery platform, <span class="ink">10M deliveries a month.</span></p></div>
+        <div class="fact"><span class="n">EDUCATION</span><p class="body"><span class="ink">PhD, robotics</span>; three patents in multi-robot planning.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 19 TEAM · FOUNDER PROFILE (duplicate this slide for each founder) ═══ -->
+<section class="slide" data-title="Team · Jordan Reyes" data-pal="6">
+  <div class="pad">
+    <div class="kick"><span>Team</span><span class="n"></span></div>
+    <div class="row" style="gap:3.4cqw;align-items:stretch;flex:1;min-height:0">
+      <figure class="obj rv bare ph avatar" style="flex:0 0 23cqw;--px:30%;--py:20%"><span aria-hidden="true">JR</span></figure>
+      <div class="col" style="flex:1">
+        <p class="label rv">Founder &amp; CEO</p>
+        <h2 class="h1 rv d2" style="margin:0.8cqw 0 1.2cqw;font-size:4cqw">Jordan Reyes</h2>
+        <p class="lead rv d2" style="font-size:1.5cqw">An operator who has run the floor. Ran fulfilment centres at national scale, sold logistics software from zero, and built a brand that needed exactly this.</p>
+        <div class="g3 cells rv d3 end" style="margin-top:1.6cqw">
+          <div><span class="mono n">OPERATED</span><p class="body" style="margin-top:0.8cqw">Four fulfilment centres for a national retailer: <span class="ink">2,000 staff</span> and <span class="ink">300K orders a day</span>.</p></div>
+          <div><span class="mono n">SOLD</span><p class="body" style="margin-top:0.8cqw">First sales hire at a logistics startup, from <span class="ink">$0 to $12M ARR</span> in three years.</p></div>
+          <div><span class="mono n">FOUNDED</span><p class="body" style="margin-top:0.8cqw">Built and sold a direct-to-consumer brand, <span class="ink">shipping from one warehouse</span> to the whole country.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="label rv d3" style="margin:2cqw 0 1.2cqw">The path to ACME</p>
+    <div class="path rv d4" style="--n:7;margin:8.6cqw 0 1.4cqw">
+      <div><i class="lg">U</i><b>2012</b><span>State University</span><small>BS · industrial engineering</small></div>
+      <div><i class="lg">N</i><b>2013–17</b><span>National Retail</span><small>Shift lead to site manager</small></div>
+      <div><i class="lg">N</i><em class="tip">4 sites<br>300K orders a day</em><b>2017–19</b><span>National Retail</span><small>Director, fulfilment</small></div>
+      <div><i class="lg">L</i><em class="tip">Acquired 2022</em><b>2019–22</b><span>LogiSoft</span><small>First sales hire · $12M ARR</small></div>
+      <div><i class="lg">B</i><b>2022–24</b><span>Brightline Goods</span><small>Founder · D2C home goods</small></div>
+      <div><i class="lg">B</i><em class="tip">Sold 2024</em><b>2024</b><span>Brightline Goods</span><small>Sold to a strategic buyer</small></div>
+      <div class="now"><i class="lg">A</i><b>Now</b><span>ACME</span><small>Founder · same-day for all</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 20 PRODUCT IN PICTURES (screens or other work, each a link) ═══ -->
+<section class="slide" data-title="Product · in pictures">
+  <div class="pad">
+    <div class="kick"><span>Product · in pictures</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:1.8cqw">
+      <h2 class="h1 rv">Built, not slides.</h2>
+      <p class="body rv d2" style="max-width:40cqw">Everything in this deck runs today. Six screens from the pilot, each one a link: try them at <a class="media-link" href="https://acme.example" target="_blank" rel="noopener">acme.example&nbsp;↗</a></p>
+    </div>
+    <div class="shots grow rv d3 bare">
+      <a class="shot-link" href="https://acme.example/console" target="_blank" rel="noopener"><figure><div class="obj ph" style="--px:20%;--py:20%"></div><figcaption><b>Console</b><span>stock, orders and cities on one screen</span></figcaption></figure></a>
+      <a class="shot-link" href="https://acme.example/forecast" target="_blank" rel="noopener"><figure><div class="obj ph" style="--px:70%;--py:30%"></div><figcaption><b>Forecast</b><span>units per city, per week</span></figcaption></figure></a>
+      <a class="shot-link" href="https://acme.example/track" target="_blank" rel="noopener"><figure><div class="obj ph" style="--px:40%;--py:70%"></div><figcaption><b>Tracking</b><span>the shopper's live map</span></figcaption></figure></a>
+      <a class="shot-link" href="https://acme.example/dock" target="_blank" rel="noopener"><figure><div class="obj ph" style="--px:80%;--py:60%"></div><figcaption><b>Dock</b><span>the operator's floor app</span></figcaption></figure></a>
+      <a class="shot-link" href="https://acme.example/returns" target="_blank" rel="noopener"><figure><div class="obj ph" style="--px:30%;--py:50%"></div><figcaption><b>Returns</b><span>back on the shelf in a day</span></figcaption></figure></a>
+      <a class="shot-link" href="https://acme.example/launch" target="_blank" rel="noopener"><figure><div class="obj ph" style="--px:60%;--py:15%"></div><figcaption><b>Launch planner</b><span>stock a drop across cities</span></figcaption></figure></a>
+    </div>
+    <p class="small rv d4" style="margin-top:1.2cqw">Also: an <span class="ink">open API</span> for brands that build their own checkout, and a <span class="ink">Shopify app</span> in review.</p>
+  </div>
+</section>
+
+<!-- ═══ 21 THE ASK ═══ -->
+<section class="slide" data-title="The ask">
+  <div class="pad">
+    <div class="kick"><span>Financials · the ask</span><span class="n"></span></div>
+    <div class="split" style="grid-template-columns:1fr 1.2fr">
+      <div class="col">
+        <p class="label rv">Raising</p>
+        <div class="display rv d2" style="font-size:9cqw;margin:1.2cqw 0">$6M</div>
+        <p class="lead rv d2">Seed round for 24 months and a team of ~22: densify the Bay Area, launch New York and Los Angeles, and open Dock to operators.</p>
+        <div class="rv d3 end">
+          <p class="label" style="margin-bottom:1.3cqw">Use of funds · ~22 people by month 24</p>
+          <div class="bars wide" style="gap:0.8cqw">
+            <div class="bar-row"><span class="lbl">Engineering &amp; robotics (8)</span><div class="trk"><div class="fill" style="width:100%"></div></div><span class="val">30% · $1.8M</span></div>
+            <div class="bar-row"><span class="lbl">Docks &amp; operations (6)</span><div class="trk"><div class="fill" style="width:83.3%"></div></div><span class="val">25% · $1.5M</span></div>
+            <div class="bar-row"><span class="lbl">Sales &amp; partnerships (5)</span><div class="trk"><div class="fill" style="width:60%"></div></div><span class="val">18% · $1.1M</span></div>
+            <div class="bar-row"><span class="lbl">G&amp;A &amp; reserve (2)</span><div class="trk"><div class="fill" style="width:40%"></div></div><span class="val">12% · $0.7M</span></div>
+            <div class="bar-row"><span class="lbl">Marketing (1)</span><div class="trk"><div class="fill" style="width:33.3%"></div></div><span class="val">10% · $0.6M</span></div>
+            <div class="bar-row"><span class="lbl">Insurance &amp; legal</span><div class="trk"><div class="fill" style="width:16.7%"></div></div><span class="val">5% · $0.3M</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <p class="label rv" style="margin-bottom:1.2cqw">Milestones this round buys</p>
+        <table class="t rv d2" style="font-size:0.98cqw">
+          <tr><th>By</th><th>Milestone</th></tr>
+          <tr><td class="mono">Month 3</td><td>Six Bay Area docks; 100 paying brands</td></tr>
+          <tr><td class="mono">Month 6</td><td>Dock open to operators; first robots leased</td></tr>
+          <tr><td class="mono">Month 9</td><td>New York live with four docks</td></tr>
+          <tr><td class="mono">Month 12</td><td>500 brands; $500K monthly revenue</td></tr>
+          <tr><td class="mono">Month 18</td><td>Los Angeles live; storefront app partnerships</td></tr>
+          <tr><td class="mono">Month 24</td><td>Series A metrics: 1,000 brands, contribution-positive in every city</td></tr>
+        </table>
+        <p class="label rv d3" style="margin:auto 0 1.2cqw">Five-year path (SOM)</p>
+        <div class="g3 cells rv d3">
+          <div><div class="fig" style="font-size:3.6cqw">12K</div><p class="small">brands by year 5</p></div>
+          <div><div class="fig" style="font-size:3.6cqw">$1.1B</div><p class="small">spend, ~2.6% of SAM</p></div>
+          <div><div class="fig" style="font-size:3.6cqw">~$160M</div><p class="small">net revenue</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 22 BUDGET ═══ -->
+<section class="slide" data-title="Budget">
+  <div class="pad">
+    <div class="kick"><span>Financials · where the $6M goes</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:1.6cqw">
+      <h2 class="h1 rv">People, docks, <span class="pig">tools.</span></h2>
+      <p class="body rv d2" style="max-width:40cqw">A 24-month budget built bottom-up. Salaries are fully loaded and ramp as the team is hired; every line rolls up to the use of funds.</p>
+    </div>
+    <div class="g3 cells grow rv d2 costs" style="grid-template-columns:1.25fr 1fr 0.85fr;gap:0">
+      <div>
+        <div class="row" style="justify-content:space-between;align-items:baseline"><span class="mono n">PEOPLE · 22</span><span class="fig" style="font-size:2.4cqw">$3.4M</span></div>
+        <table class="t">
+          <tr><th>Team</th><th class="r">#</th><th class="r">Loaded / yr</th><th class="r">24 mo</th></tr>
+          <tr><td>Engineering &amp; robotics</td><td class="r mono">8</td><td class="r mono">$190K</td><td class="r mono">$1.30M</td></tr>
+          <tr><td>Dock operations</td><td class="r mono">6</td><td class="r mono">$95K</td><td class="r mono">$0.72M</td></tr>
+          <tr><td>Sales &amp; partnerships</td><td class="r mono">5</td><td class="r mono">$140K</td><td class="r mono">$0.55M</td></tr>
+          <tr><td>Founders &amp; G&amp;A</td><td class="r mono">2</td><td class="r mono">$160K</td><td class="r mono">$0.48M</td></tr>
+          <tr><td>Marketing</td><td class="r mono">1</td><td class="r mono">$130K</td><td class="r mono">$0.35M</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="row" style="justify-content:space-between;align-items:baseline"><span class="mono n">ACTIVITY</span><span class="fig" style="font-size:2.4cqw">$1.9M</span></div>
+        <table class="t">
+          <tr><th>Line</th><th class="r">24 mo</th></tr>
+          <tr><td>Dock fit-outs &amp; robot leases</td><td class="r mono">$0.80M</td></tr>
+          <tr><td>Paid acquisition</td><td class="r mono">$0.45M</td></tr>
+          <tr><td>Brand onboarding credits</td><td class="r mono">$0.25M</td></tr>
+          <tr><td>Inventory insurance</td><td class="r mono">$0.15M</td></tr>
+          <tr><td>Legal &amp; compliance</td><td class="r mono">$0.15M</td></tr>
+          <tr><td>City launch events</td><td class="r mono">$0.10M</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="row" style="justify-content:space-between;align-items:baseline"><span class="mono n">TOOLS &amp; INFRA</span><span class="fig" style="font-size:2.4cqw">$0.4M</span></div>
+        <table class="t">
+          <tr><th>Line</th><th class="r">24 mo</th></tr>
+          <tr><td>Cloud &amp; mapping</td><td class="r mono">$0.15M</td></tr>
+          <tr><td>Forecasting compute</td><td class="r mono">$0.10M</td></tr>
+          <tr><td>Accounting &amp; office</td><td class="r mono">$0.10M</td></tr>
+          <tr><td>SaaS stack</td><td class="r mono">$0.05M</td></tr>
+        </table>
+        <div style="margin-top:auto;padding-top:1.2cqw;border-top:1px solid var(--fg-22)">
+          <div class="row" style="justify-content:space-between"><span class="mono n">CONTINGENCY</span><span class="mono body ink">$0.3M</span></div>
+          <div class="row" style="justify-content:space-between;margin-top:0.6cqw"><span class="label ink">Total</span><span class="fig" style="font-size:2.4cqw">$6.0M</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="src" style="margin-top:0.9cqw">Planning figures, not commitments. Loaded salary = base + taxes + benefits; 24-month cost reflects the hiring ramp.</p>
+  </div>
+</section>
+
+<!-- ═══ 23 VISION ═══ -->
+<section class="slide" data-title="Vision" data-nofolio>
+  <figure class="mosaic" aria-hidden="true">
+    <span class="ph" style="--px:20%;--py:20%"></span><span class="ph" style="--px:80%;--py:30%"></span><span class="ph" style="--px:50%;--py:80%"></span>
+    <span class="ph" style="--px:30%;--py:60%"></span><span class="ph" style="--px:70%;--py:10%"></span><span class="ph" style="--px:10%;--py:90%"></span>
+    <span class="ph" style="--px:60%;--py:40%"></span><span class="ph" style="--px:90%;--py:70%"></span><span class="ph" style="--px:40%;--py:20%"></span>
+    <span class="ph" style="--px:20%;--py:80%"></span><span class="ph" style="--px:75%;--py:55%"></span><span class="ph" style="--px:35%;--py:35%"></span>
+    <span class="ph" style="--px:55%;--py:15%"></span><span class="ph" style="--px:15%;--py:45%"></span><span class="ph" style="--px:85%;--py:85%"></span>
+    <span class="ph" style="--px:45%;--py:65%"></span><span class="ph" style="--px:65%;--py:25%"></span><span class="ph" style="--px:25%;--py:75%"></span>
+  </figure>
+  <div class="pad" style="text-align:center">
+    <div class="kick" style="text-align:left"><span>Vision</span><span class="n"></span></div>
+    <div class="grow center over-art">
+      <p class="label rv">This is for the independents</p>
+      <h2 class="display rv d2" style="font-size:6.6cqw;margin:2.4cqw 0">Same-day, everywhere</h2>
+      <p class="lead rv d3" style="max-width:62cqw">The giants built their moat out of warehouses. ACME turns that moat into a shared network, so the next great brand can start small and still deliver like the biggest:<br>a fulfilment layer for the whole internet.</p>
+      <p class="pull rv d4" style="margin-top:3cqw;font-size:1.8cqw">Every brand deserves the giants' logistics.<br>Now every brand has them.</p>
+    </div>
+    <div class="row rule" style="padding-top:1.2cqw;justify-content:space-between;align-items:center">
+      <span class="label">Jordan Reyes · Founder</span><span class="wordmark" role="img" aria-label="ACME"></span><span class="label">acme.example</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 24 NEXT · INTRO (a future product, on a light ground) ═══ -->
+<section class="slide" data-title="Next · intro" data-light="#F2EEE6,#1C1A17,#D9481C">
+  <div class="pad" style="text-align:center">
+    <div class="kick" style="text-align:left"><span>Next · ACME Fresh</span><span class="n"></span></div>
+    <div class="grow center">
+      <span class="by">A product by <i class="wordmark" role="img" aria-label="ACME"></i></span>
+      <div class="rv"><span class="product-name">Fresh<i>cold chain</i></span></div>
+      <p class="label rv d2" style="margin-top:1cqw">Same-day for food, flowers and anything that can't wait</p>
+      <div class="tagline rv d2" style="margin:2.2cqw 0 2.4cqw">Cold, Same Day</div>
+      <p class="lead rv d3" style="max-width:66cqw">The same network with a chilled aisle. Independent food and beverage brands get refrigerated docks, temperature-logged picking and insulated couriers, without building any of it.</p>
+    </div>
+    <div class="strip flow-strip rv d4" style="--n:5">
+      <div><span>Receive</span><b>Chilled dock</b></div>
+      <div><span>Store</span><b>2–8 °C bays</b></div>
+      <div><span>Pick</span><b>Temperature-logged</b></div>
+      <div><span>Pack</span><b>Insulated kits</b></div>
+      <div><span>Courier</span><b>Cold bags</b></div>
+      <div class="hl"><span>Deliver</span><b>Same day, fresh</b></div>
+    </div>
+    <p class="small rv d4" style="margin-top:0.9cqw;text-align:left">The fastest-growing brands on our waitlist ship food. <em class="ink" style="font-style:normal">Fresh is how we keep them.</em></p>
+  </div>
+</section>
+
+<!-- ═══ 25 NEXT · DETAIL ═══ -->
+<section class="slide" data-title="Next · detail" data-light="#F2EEE6,#1C1A17,#D9481C">
+  <div class="pad">
+    <div class="kick"><span>Next · ACME Fresh</span><span class="n"></span></div>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:1.6cqw;gap:4cqw">
+      <h2 class="h1 rv" style="max-width:52cqw">The same network, <span class="pig">kept cold.</span></h2>
+      <p class="body rv d2" style="max-width:38cqw">Grocery delivery proved shoppers will buy fresh online. Independent food brands still ship it in ice packs over three days. Fresh gives them the same same-day promise as everyone else.</p>
+    </div>
+    <div class="g4 cells rv d2 stats">
+      <div><div class="fig">31<small>%</small></div><p class="small">of brands on our waitlist sell food, drink or flowers. <span class="src">ACME waitlist, illustrative</span></p></div>
+      <div><div class="fig">3<small>days</small></div><p class="small">typical transit for a small food brand shipping nationally on ice. <span class="src">Illustrative</span></p></div>
+      <div><div class="fig">$19<small>B</small></div><p class="small">online specialty food sales in the US. <span class="src">Illustrative</span></p></div>
+      <div><div class="fig">2×</div><p class="small">higher order frequency for food brands that offer same-day. <span class="src">Illustrative</span></p></div>
+    </div>
+    <div class="split grow rv d3" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:3cqw;margin-top:1.4cqw">
+      <div class="col">
+        <p class="label" style="margin-bottom:0.8cqw">What a Fresh dock includes</p>
+        <div class="steps grid6">
+          <div><span class="mono n">COLD</span><h3 class="h3">Chilled bays</h3><p class="small">2–8 °C and frozen zones in every Fresh dock.</p></div>
+          <div><span class="mono n">LOGGED</span><h3 class="h3">Temperature trail</h3><p class="small">Every unit logged from receiving to doorstep.</p></div>
+          <div><span class="mono n">FAST</span><h3 class="h3">Short cut-offs</h3><p class="small">Order by 4 pm, delivered by 9 pm.</p></div>
+          <div><span class="mono n">SAFE</span><h3 class="h3">Food-grade</h3><p class="small">Certified handling and recall tracing built in.</p></div>
+          <div><span class="mono n">LEAN</span><h3 class="h3">Short shelf lives</h3><p class="small">The forecast stocks days, not weeks.</p></div>
+          <div class="on"><span class="mono n">SAME NETWORK</span><h3 class="h3">One Console</h3><p class="small">Fresh and ambient stock on one screen.</p></div>
+        </div>
+      </div>
+      <div class="col" style="justify-content:space-between;border-left:1px solid var(--fg-22);padding-left:3cqw">
+        <p class="label">Lessons we build on</p>
+        <div><h3 class="h3" style="margin:0 0 0.4cqw">Follow the brands</h3><p class="small">Fresh opens in cities where food brands already ship through ACME, never ahead of them.</p></div>
+        <div><h3 class="h3" style="margin:0 0 0.4cqw">Retrofit, don't build</h3><p class="small">Chilled zones go into existing docks; no stand-alone cold stores.</p></div>
+        <div><h3 class="h3" style="margin:0 0 0.4cqw">Price the risk</h3><p class="small">Spoilage cover is in the per-order fee, so brands see one price.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 26 THANK YOU ═══ -->
+<section class="slide" data-title="Thank you" data-nofolio>
+  <figure class="obj hero-art square ph" data-ph="Closing image · 1:1" style="--px:70%;--py:30%">
+    <figcaption>Delivered the same day, from three miles away</figcaption>
+  </figure>
+  <div class="pad">
+    <div class="kick"><span>Thank you</span><span class="n">Seed · 2026</span></div>
+    <div class="grow col" style="justify-content:center;max-width:48cqw">
+      <p class="label rv">Let's build it together</p>
+      <h2 class="display rv d2" style="font-size:7.4cqw;margin:1.6cqw 0 2cqw">Thank you</h2>
+      <p class="lead rv d3">The giants taught shoppers to expect today. <em>We give every brand today</em>, with the operators, couriers and makers who will build the next great brands.</p>
+      <div class="g3 cells rv d4 contact" style="grid-template-columns:1fr;margin-top:2.2cqw;gap:0">
+        <div><span class="mono n">FOUNDER &amp; CEO</span><p class="body ink">Jordan Reyes</p></div>
+        <div><span class="mono n">EMAIL</span><p class="body"><a class="media-link" href="mailto:jordan@acme.example">jordan@acme.example</a></p></div>
+        <div><span class="mono n">WEB</span><p class="body"><a class="media-link" href="https://acme.example" target="_blank" rel="noopener">acme.example</a></p></div>
+      </div>
+      <p class="small rv d4" style="margin-top:1.4cqw">Try it: <a class="media-link" href="https://acme.example/console" target="_blank" rel="noopener">/console</a> · <a class="media-link" href="https://acme.example/dock" target="_blank" rel="noopener">/dock</a> · <a class="media-link" href="https://acme.example/track" target="_blank" rel="noopener">/track</a></p>
+    </div>
+    <div class="row rule" style="padding-top:1.2cqw;justify-content:space-between;align-items:center">
+      <span class="label">Confidential · for investors</span><span class="wordmark" role="img" aria-label="ACME"></span><span class="label">Appendix follows</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 27 APPENDIX · SOURCES ═══ -->
+<section class="slide" data-title="Appendix · sources">
+  <div class="pad">
+    <div class="kick"><span>Appendix · sources</span><span class="n"></span></div>
+    <div class="sources src">
+      <p>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Research, Same-Day Delivery Index 2026</a> (shopper delivery expectations)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Research, Checkout Conversion Study 2025</a> (same-day lift at checkout)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Analytics, Warehouse Robotics Cost Curve 2025</a> (robot cost and leasing)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Realty, Urban Retail Vacancy Report 2026</a> (ground-floor vacancy)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Market Insights, Third-Party Logistics Market 2026</a> (TAM)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Market Insights, Parcel Delivery Market 2026</a> (adjacent markets)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Market Insights, Micro-Fulfilment Market 2025</a> (adjacent markets)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Survey, Why Shoppers Choose Where to Buy 2025</a> (speed versus price)<br>
+      <a class="srclink" href="https://example.com" target="_blank" rel="noopener">Example Foods Report, Online Specialty Food Sales 2026</a> (ACME Fresh)<br>
+      ACME pilot data, San Francisco and Oakland, 2026 (orders, dispatch times, same-day rate)<br>
+      ACME operator and brand interviews, 2025–26<br>
+      ACME financial model, October 2026 (budget, unit economics, five-year path)<br>
+      <br>
+      ACME is a fictional company and every source above is a placeholder. Replace each line with a real citation: publisher, title, year and link.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+<p class="hint">← → navigate · P present · Esc exit</p>
+
+<script src="deck.js"></script>
+</body>
+</html>
